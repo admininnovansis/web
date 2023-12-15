@@ -20,7 +20,7 @@ export const webNotificationService = {
 
             notifications.forEach(function (notif) {
                 browser.setTimeout(function () {
-                    notification.add(renderToMarkup(notif.message), {
+                    notification.add(notif.message, {
                         title: notif.title,
                         type: notif.type,
                         sticky: notif.sticky,
